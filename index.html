@@ -2,93 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Plainsight Deals — Find Projects & Opportunities Worth Pitching</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Plainsight Deals — Find Your Next Great Project</title>
 
   <meta
     name="description"
-    content="Discover active projects, RFPs, contracts, and professional service opportunities for agencies and service providers. Spend less time searching and more time pitching."
+    content="Plainsight Deals helps agencies, freelancers, consultants and service businesses find real projects and opportunities worth pursuing."
   />
 
-  <meta
-    name="keywords"
-    content="agency leads, RFP opportunities, agency opportunities, web development RFPs, software development opportunities, marketing RFPs, design opportunities, consulting opportunities, business opportunities for agencies, project opportunities"
-  />
-
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#f7f6f2" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Plainsight Deals — Find Projects Worth Pitching" />
-  <meta
-    property="og:description"
-    content="Discover active projects, RFPs, contracts, and professional service opportunities for agencies and service providers."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://plainsightdeals.com/" />
-
-  <link rel="canonical" href="https://plainsightdeals.com/" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <meta name="theme-color" content="#11110f" />
 
   <style>
-    :root {
-      --bg: #f7f6f2;
-      --surface: #ffffff;
-      --surface-soft: #efeee9;
-      --text: #171717;
-      --muted: #686863;
-      --border: #deddd7;
-      --border-dark: #c9c8c0;
 
-      --accent: #d7ff4f;
-      --accent-dark: #a9d523;
-
-      --dark: #171817;
-      --dark-soft: #242522;
-
-      --max-width: 1180px;
-      --nav-height: 76px;
-
-      --radius-sm: 10px;
-      --radius-md: 16px;
-      --radius-lg: 24px;
-      --radius-xl: 32px;
-
-      --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.04);
-      --shadow-md: 0 16px 45px rgba(0, 0, 0, 0.08);
-    }
+    /* =========================================================
+       RESET
+    ========================================================= */
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
     }
 
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: "DM Sans", sans-serif;
+      background: #f5f2ea;
+      color: #11110f;
+      font-family: Inter, Arial, Helvetica, sans-serif;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
     }
 
     a {
@@ -96,1961 +46,2036 @@
       text-decoration: none;
     }
 
-    button {
-      font: inherit;
+    img {
+      display: block;
+      max-width: 100%;
     }
+
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root {
+      --paper: #f5f2ea;
+      --paper-2: #ebe7dc;
+      --ink: #11110f;
+      --muted: #68665f;
+      --yellow: #eaff00;
+      --yellow-soft: #f2f59b;
+      --white: #ffffff;
+      --line: #d6d2c7;
+      --dark-line: #34332f;
+      --max-width: 1200px;
+    }
+
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
 
     .container {
-      width: min(var(--max-width), calc(100% - 40px));
-      margin-inline: auto;
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
     }
 
-    /* --------------------------------
-       NAVIGATION
-    -------------------------------- */
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      height: var(--nav-height);
-      display: flex;
-      align-items: center;
-      background: rgba(247, 246, 242, 0.88);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-family: "Manrope", sans-serif;
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-    }
-
-    .logo-mark {
-      width: 27px;
-      height: 27px;
-      display: grid;
-      place-items: center;
-      border-radius: 8px;
-      background: var(--dark);
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      margin-left: auto;
-      margin-right: 30px;
-    }
-
-    .nav-links a {
-      color: #5e5e59;
-      font-size: 14px;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
-    .nav-cta {
-      white-space: nowrap;
-    }
-
-    .mobile-toggle {
-      display: none;
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      background: var(--surface);
-      cursor: pointer;
-    }
-
-    .mobile-toggle span,
-    .mobile-toggle::before,
-    .mobile-toggle::after {
-      content: "";
-      display: block;
-      width: 18px;
-      height: 2px;
-      background: var(--text);
-      margin: 4px auto;
-      transition: transform 0.2s ease;
-    }
-
-    /* --------------------------------
-       BUTTONS
-    -------------------------------- */
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      min-height: 48px;
-      padding: 0 20px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    .btn-primary {
-      background: var(--dark);
-      color: white;
-      box-shadow: 0 4px 0 rgba(0, 0, 0, 0.12);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
-    }
-
-    .btn-accent {
-      background: var(--accent);
-      color: var(--dark);
-    }
-
-    .btn-accent:hover {
-      transform: translateY(-2px);
-      background: #e0ff71;
-      box-shadow: 0 10px 25px rgba(215, 255, 79, 0.2);
-    }
-
-    .arrow {
-      font-size: 17px;
-      line-height: 0;
-    }
-
-    /* --------------------------------
-       HERO
-    -------------------------------- */
-
-    .hero {
-      padding: 92px 0 105px;
-      position: relative;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 70px;
-      align-items: center;
+    .serif {
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 22px;
-      color: #5f6253;
-      font-size: 12px;
+      gap: 9px;
+      font-size: 11px;
       font-weight: 800;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
     }
 
     .eyebrow::before {
       content: "";
-      width: 8px;
-      height: 8px;
+      width: 25px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .yellow {
+      color: var(--yellow);
+    }
+
+
+    /* =========================================================
+       BUTTONS
+    ========================================================= */
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+
+      padding: 16px 22px;
+
+      background: var(--yellow);
+      color: var(--ink);
+
+      border: 2px solid var(--yellow);
+      border-radius: 5px;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .button-dark {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--white);
+    }
+
+    .button-dark:hover {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      color: var(--ink);
+    }
+
+    .arrow {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav {
+      min-height: 78px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+    }
+
+    .logo-mark {
+      width: 16px;
+      height: 16px;
+      background: var(--yellow);
+      border: 2px solid var(--ink);
+      transform: rotate(-5deg);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .nav-link:hover {
+      color: var(--ink);
+    }
+
+    .nav .button {
+      padding: 12px 17px;
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      position: relative;
+      padding: 100px 0 95px;
+      overflow: hidden;
+    }
+
+    /*
+      Decorative background marks
+    */
+
+    .hero::before {
+      content: "";
+      position: absolute;
+
+      width: 420px;
+      height: 420px;
+
+      right: -180px;
+      top: 50px;
+
+      background: var(--yellow);
+
       border-radius: 50%;
-      background: var(--accent-dark);
+
+      opacity: 0.35;
+
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 80px;
+      align-items: end;
     }
 
     .hero h1 {
-      max-width: 680px;
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(50px, 6vw, 82px);
-      line-height: 0.98;
-      letter-spacing: -0.065em;
-      font-weight: 800;
-      margin-bottom: 28px;
+      margin-top: 25px;
+
+      max-width: 850px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(58px, 7.5vw, 100px);
+      line-height: 0.92;
+
+      letter-spacing: -0.075em;
+      font-weight: 500;
     }
 
-    .hero-description {
-      max-width: 580px;
-      color: var(--muted);
-      font-size: 19px;
-      line-height: 1.65;
-      margin-bottom: 14px;
+    .hero h1 .highlight {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
     }
 
-    .hero-secondary {
-      max-width: 580px;
-      color: #7b7b74;
-      font-size: 15px;
-      line-height: 1.7;
-      margin-bottom: 32px;
+    .hero h1 .highlight::after {
+      content: "";
+
+      position: absolute;
+
+      left: -5px;
+      right: -5px;
+      bottom: 7px;
+
+      height: 17px;
+
+      background: var(--yellow);
+
+      transform: rotate(-1.5deg);
+
+      z-index: -1;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 14px;
+    .hero-copy {
+      max-width: 480px;
+      padding-bottom: 5px;
+    }
+
+    .hero-copy p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #4e4c46;
+      margin-bottom: 22px;
+    }
+
+    .hero-copy p:first-child {
+      font-size: 21px;
+      color: var(--ink);
+      font-weight: 600;
+      line-height: 1.55;
     }
 
     .hero-note {
-      color: #777771;
-      font-size: 12px;
-      padding-left: 4px;
-    }
-
-    /* Opportunity visual */
-
-    .opportunity-visual {
-      min-height: 510px;
-      position: relative;
-    }
-
-    .visual-glow {
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      background: rgba(215, 255, 79, 0.22);
-      filter: blur(70px);
-      border-radius: 50%;
-      right: 20px;
-      top: 70px;
-      pointer-events: none;
-    }
-
-    .visual-label {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: var(--dark);
-      color: white;
-      border-radius: 999px;
-      padding: 8px 13px;
-      font-size: 10px;
+      margin-top: 17px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.07em;
-      z-index: 4;
+      color: var(--muted);
     }
 
-    .visual-card {
-      position: absolute;
-      width: 310px;
-      background: rgba(255, 255, 255, 0.96);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: var(--shadow-md);
-      animation: float 6s ease-in-out infinite;
-    }
+    .hero-bottom {
+      margin-top: 75px;
 
-    .visual-card:nth-of-type(2) {
-      top: 60px;
-      left: 20px;
-      transform: rotate(-4deg);
-      z-index: 2;
-    }
-
-    .visual-card:nth-of-type(3) {
-      top: 170px;
-      right: 0;
-      transform: rotate(3deg);
-      z-index: 3;
-      animation-delay: -2s;
-    }
-
-    .visual-card:nth-of-type(4) {
-      bottom: 35px;
-      left: 45px;
-      transform: rotate(2deg);
-      z-index: 1;
-      animation-delay: -4s;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        translate: 0 0;
-      }
-      50% {
-        translate: 0 -8px;
-      }
-    }
-
-    .mini-category {
-      color: #77776f;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.09em;
-      margin-bottom: 9px;
-    }
-
-    .visual-card h3 {
-      font-family: "Manrope", sans-serif;
-      font-size: 20px;
-      line-height: 1.2;
-      letter-spacing: -0.035em;
-      margin-bottom: 16px;
-    }
-
-    .mini-row {
       display: flex;
       justify-content: space-between;
-      padding: 10px 0;
-      border-top: 1px solid #ecebe6;
-      font-size: 11px;
+      align-items: center;
+
+      padding-top: 20px;
+
+      border-top: 1px solid var(--line);
     }
 
-    .mini-row span:first-child {
-      color: #888880;
-    }
-
-    .mini-row span:last-child {
+    .hero-bottom-left {
+      font-size: 12px;
+      color: var(--muted);
       font-weight: 700;
     }
 
-    /* --------------------------------
-       SECTION COMMON
-    -------------------------------- */
+    .hero-bottom-right {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px;
+      font-style: italic;
+    }
 
-    section {
+
+    /* =========================================================
+       DARK INTRO
+    ========================================================= */
+
+    .intro {
+      background: var(--ink);
+      color: var(--white);
+      padding: 115px 0;
       position: relative;
     }
 
-    .section {
-      padding: 110px 0;
+    .intro::after {
+      content: "01";
+
+      position: absolute;
+
+      right: 5%;
+      top: 45px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 150px;
+
+      color: #24231f;
+
+      line-height: 1;
     }
 
-    .section-header {
-      max-width: 710px;
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 100px;
+
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro h2 {
+      margin-top: 20px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(45px, 5.3vw, 72px);
+      line-height: 0.98;
+
+      letter-spacing: -0.06em;
+      font-weight: 500;
+    }
+
+    .intro-copy {
+      max-width: 650px;
+    }
+
+    .intro-copy > p {
+      font-size: 19px;
+      line-height: 1.75;
+      color: #d0cec7;
+      margin-bottom: 24px;
+    }
+
+    .example-list {
+      margin-top: 48px;
+      border-top: 1px solid var(--dark-line);
+    }
+
+    .example {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 20px;
+
+      padding: 22px 0;
+
+      border-bottom: 1px solid var(--dark-line);
+    }
+
+    .example-number {
+      color: var(--yellow);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 15px;
+    }
+
+    .example p {
+      font-size: 16px;
+      color: #e3e1da;
+      margin: 0;
+    }
+
+
+    /* =========================================================
+       STORY
+    ========================================================= */
+
+    .story {
+      padding: 125px 0;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 100px;
+    }
+
+    .story h2 {
+      margin-top: 20px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 6vw, 78px);
+      line-height: 0.96;
+
+      letter-spacing: -0.065em;
+      font-weight: 500;
+    }
+
+    .story-copy {
+      max-width: 700px;
+    }
+
+    .story-copy p {
+      font-size: 19px;
+      line-height: 1.8;
+      color: #4e4c46;
+      margin-bottom: 26px;
+    }
+
+    .story-question {
+      position: relative;
+
+      margin: 45px 0;
+
+      padding: 32px 35px;
+
+      background: var(--yellow);
+
+      border: 2px solid var(--ink);
+
+      box-shadow: 8px 8px 0 var(--ink);
+
+      transform: rotate(-0.6deg);
+    }
+
+    .story-question p {
+      margin: 0;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 31px;
+      line-height: 1.25;
+
+      color: var(--ink);
+    }
+
+
+    /* =========================================================
+       DIFFERENT
+    ========================================================= */
+
+    .different {
+      padding: 110px 0;
+
+      background: var(--paper-2);
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+
+      position: relative;
+    }
+
+    .different::before {
+      content: "02";
+
+      position: absolute;
+      left: 4%;
+      top: 50px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 130px;
+
+      color: #ddd9cd;
+    }
+
+    .different-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 100px;
+
+      position: relative;
+      z-index: 1;
+    }
+
+    .different h2 {
+      margin-top: 20px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(44px, 5.2vw, 70px);
+      line-height: 0.98;
+
+      letter-spacing: -0.06em;
+      font-weight: 500;
+    }
+
+    .different-copy {
+      max-width: 690px;
+    }
+
+    .different-copy p {
+      font-size: 18px;
+      line-height: 1.75;
+      color: #4f4d47;
+      margin-bottom: 24px;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      margin-top: 38px;
+    }
+
+    .service-tag {
+      padding: 9px 13px;
+
+      border: 1px solid #bbb7ac;
+      border-radius: 999px;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      background: var(--paper);
+    }
+
+    .service-tag:nth-child(3n + 1) {
+      background: var(--yellow);
+      border-color: var(--ink);
+    }
+
+
+    /* =========================================================
+       OPPORTUNITIES
+    ========================================================= */
+
+    .opportunities {
+      padding: 125px 0;
+    }
+
+    .opportunities-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 50px;
+
       margin-bottom: 55px;
     }
 
-    .section-header.center {
-      margin-inline: auto;
-      text-align: center;
+    .opportunities-heading h2 {
+      margin-top: 20px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 5.8vw, 75px);
+      line-height: 0.95;
+
+      letter-spacing: -0.065em;
+      font-weight: 500;
+
+      max-width: 700px;
     }
 
-    .section-kicker {
-      margin-bottom: 14px;
-      color: #77776f;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
+    .opportunities-heading p {
+      max-width: 330px;
 
-    .section-title {
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(38px, 5vw, 62px);
-      line-height: 1.04;
-      letter-spacing: -0.055em;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    .section-subtitle {
       color: var(--muted);
-      font-size: 17px;
-      line-height: 1.7;
-    }
 
-    /* --------------------------------
-       OPPORTUNITY TYPES
-    -------------------------------- */
-
-    .types-section {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .types-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .type-card {
-      min-height: 230px;
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      background: var(--bg);
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .type-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .icon-box {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 11px;
-      background: var(--dark);
-      color: var(--accent);
-      margin-bottom: 30px;
-      font-size: 18px;
-    }
-
-    .type-card h3 {
-      font-family: "Manrope", sans-serif;
-      font-size: 18px;
-      letter-spacing: -0.025em;
-      margin-bottom: 9px;
-    }
-
-    .type-card p {
-      color: var(--muted);
       font-size: 14px;
-      line-height: 1.65;
-    }
-
-    /* --------------------------------
-       SAMPLE OPPORTUNITIES
-    -------------------------------- */
-
-    .opportunities-section {
-      padding-bottom: 70px;
-    }
-
-    .sample-notice {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #ecebe5;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 7px 12px;
-      margin-bottom: 25px;
-      color: #686861;
-      font-size: 11px;
-      font-weight: 700;
-    }
-
-    .sample-notice span {
-      width: 6px;
-      height: 6px;
-      background: #a6a69d;
-      border-radius: 50%;
+      line-height: 1.7;
     }
 
     .opportunity-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 20px;
     }
 
     .opportunity-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
+      background: var(--white);
+
+      border: 1px solid #d8d4c9;
+
       overflow: hidden;
+
       transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
     }
 
     .opportunity-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-md);
+      transform: translateY(-7px) rotate(-0.4deg);
+      box-shadow: 9px 9px 0 var(--yellow);
     }
 
-    .opportunity-top {
-      padding: 22px 22px 18px;
-      border-bottom: 1px solid var(--border);
+    .opportunity-image {
+      position: relative;
+
+      aspect-ratio: 4 / 3;
+
+      background: #ddd9cf;
+
+      overflow: hidden;
     }
 
-    .opportunity-category {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 23px;
+    /*
+      Replace these with your real opportunity screenshots.
+
+      Example:
+      url("images/opportunity-1.jpg")
+    */
+
+    .opportunity-image.one {
+      background:
+        url("https://placehold.co/900x675/e3dfd4/22221e?text=Opportunity+01")
+        center / cover no-repeat;
     }
 
-    .category-label {
+    .opportunity-image.two {
+      background:
+        url("https://placehold.co/900x675/e3dfd4/22221e?text=Opportunity+02")
+        center / cover no-repeat;
+    }
+
+    .opportunity-image.three {
+      background:
+        url("https://placehold.co/900x675/e3dfd4/22221e?text=Opportunity+03")
+        center / cover no-repeat;
+    }
+
+    .opportunity-number {
+      position: absolute;
+
+      top: 12px;
+      left: 12px;
+
+      padding: 6px 9px;
+
+      background: var(--yellow);
+
+      border: 1px solid var(--ink);
+
       font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      color: #72726c;
+      font-weight: 900;
     }
 
-    .sample-pill {
-      padding: 5px 8px;
-      border-radius: 6px;
-      background: #f0f0eb;
-      color: #77776f;
-      font-size: 9px;
-      font-weight: 800;
-      text-transform: uppercase;
+    .opportunity-content {
+      padding: 27px;
     }
 
-    .opportunity-card h3 {
-      font-family: "Manrope", sans-serif;
-      font-size: 20px;
-      line-height: 1.22;
-      letter-spacing: -0.035em;
-      margin-bottom: 12px;
-    }
-
-    .organization {
-      color: #707069;
-      font-size: 13px;
-    }
-
-    .opportunity-details {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .detail {
-      padding: 15px 20px;
-      border-right: 1px solid var(--border);
-    }
-
-    .detail:nth-child(2n) {
-      border-right: none;
-    }
-
-    .detail:nth-child(-n+2) {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .detail-label {
-      display: block;
-      color: #909089;
-      font-size: 9px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 5px;
-    }
-
-    .detail-value {
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .services {
-      padding: 16px 20px;
-      min-height: 68px;
-    }
-
-    .services span {
+    .opportunity-label {
       display: inline-block;
-      margin: 0 4px 5px 0;
-      padding: 5px 8px;
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      color: #66665f;
-      font-size: 10px;
-    }
 
-    .opportunity-link {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      border-top: 1px solid var(--border);
-      font-size: 12px;
-      font-weight: 800;
-    }
+      margin-bottom: 15px;
 
-    .opportunity-link span:last-child {
-      font-size: 16px;
-      transition: transform 0.2s ease;
-    }
-
-    .opportunity-card:hover .opportunity-link span:last-child {
-      transform: translateX(4px);
-    }
-
-    .examples-cta {
-      text-align: center;
-      margin-top: 45px;
-    }
-
-    /* --------------------------------
-       WHY SECTION
-    -------------------------------- */
-
-    .why-section {
-      background: var(--dark);
-      color: white;
-    }
-
-    .why-section .section-kicker {
-      color: #a7a79f;
-    }
-
-    .why-section .section-subtitle {
-      color: #a9aaa2;
-    }
-
-    .why-section .section-title {
-      color: white;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid #393a36;
-      border-left: 1px solid #393a36;
-    }
-
-    .why-item {
-      padding: 34px 30px;
-      border-right: 1px solid #393a36;
-      border-bottom: 1px solid #393a36;
-    }
-
-    .why-number {
-      color: var(--accent);
-      font-family: "Manrope", sans-serif;
-      font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 38px;
-    }
-
-    .why-item h3 {
-      font-family: "Manrope", sans-serif;
-      font-size: 18px;
-      letter-spacing: -0.025em;
-      margin-bottom: 11px;
-    }
-
-    .why-item p {
-      color: #a7a8a1;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    /* --------------------------------
-       WHO IT'S FOR
-    -------------------------------- */
-
-    .audience-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .audience-card {
-      padding: 26px;
-      min-height: 260px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      background: var(--surface);
-    }
-
-    .audience-icon {
-      font-size: 26px;
-      margin-bottom: 65px;
-    }
-
-    .audience-card h3 {
-      font-family: "Manrope", sans-serif;
-      font-size: 17px;
-      line-height: 1.25;
-      margin-bottom: 10px;
-      letter-spacing: -0.025em;
-    }
-
-    .audience-card p {
       color: var(--muted);
-      font-size: 13px;
+
+      font-size: 10px;
+      font-weight: 900;
+
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .opportunity-content h3 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 26px;
+      line-height: 1.15;
+
+      letter-spacing: -0.03em;
+      font-weight: 500;
+
+      margin-bottom: 14px;
+    }
+
+    .opportunity-content p {
+      color: var(--muted);
+
+      font-size: 14px;
       line-height: 1.65;
     }
 
-    /* --------------------------------
-       HOW IT WORKS
-    -------------------------------- */
+    .opportunity-fit {
+      margin-top: 24px;
+      padding-top: 18px;
 
-    .how-section {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--line);
+
+      color: #4d4b45;
+
+      font-size: 11px;
+      line-height: 1.6;
     }
 
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      position: relative;
+    .opportunity-fit strong {
+      color: var(--ink);
     }
 
-    .step {
-      position: relative;
-      padding: 35px 45px 35px 0;
-    }
 
-    .step:not(:last-child)::after {
-      content: "";
-      position: absolute;
-      top: 62px;
-      right: 45px;
-      width: 1px;
-      height: 110px;
-      background: var(--border);
-    }
+    /* =========================================================
+       DIFFERENCE / LEAD LIST
+    ========================================================= */
 
-    .step-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 46px;
-      height: 46px;
-      margin-bottom: 30px;
-      border: 1px solid var(--border-dark);
-      border-radius: 50%;
-      font-family: "Manrope", sans-serif;
-      font-size: 12px;
-      font-weight: 800;
-    }
+    .lead-list {
+      background: var(--ink);
+      color: var(--white);
 
-    .step h3 {
-      font-family: "Manrope", sans-serif;
-      font-size: 22px;
-      letter-spacing: -0.035em;
-      margin-bottom: 10px;
-    }
+      padding: 120px 0;
 
-    .step p {
-      max-width: 280px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .no-commission {
-      display: inline-flex;
-      margin-top: 55px;
-      padding: 10px 14px;
-      background: var(--surface-soft);
-      border-radius: 8px;
-      color: #696963;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    /* --------------------------------
-       DATABASE CTA
-    -------------------------------- */
-
-    .database-section {
-      padding: 100px 0;
-    }
-
-    .database-box {
       position: relative;
       overflow: hidden;
-      padding: 70px;
-      background: var(--accent);
-      border-radius: var(--radius-xl);
     }
 
-    .database-box::after {
-      content: "PD";
+    .lead-list::before {
+      content: "";
+
       position: absolute;
-      right: 35px;
-      bottom: -60px;
-      font-family: "Manrope", sans-serif;
-      font-size: 250px;
-      line-height: 1;
-      font-weight: 800;
-      letter-spacing: -0.1em;
-      color: rgba(23, 24, 23, 0.06);
-      pointer-events: none;
+
+      width: 300px;
+      height: 300px;
+
+      right: -120px;
+      bottom: -130px;
+
+      border-radius: 50%;
+
+      background: var(--yellow);
     }
 
-    .database-content {
-      max-width: 700px;
+    .lead-list-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 100px;
+
       position: relative;
       z-index: 1;
     }
 
-    .database-box .section-kicker {
-      color: #535741;
-    }
+    .lead-list h2 {
+      margin-top: 20px;
 
-    .database-box h2 {
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(38px, 5vw, 60px);
-      line-height: 1.02;
-      letter-spacing: -0.055em;
-      margin-bottom: 18px;
-    }
+      font-family: Georgia, "Times New Roman", serif;
 
-    .database-box p {
-      max-width: 620px;
-      color: #515442;
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 25px;
-    }
+      font-size: clamp(46px, 5.7vw, 74px);
+      line-height: 0.96;
 
-    .database-box .small-text {
-      font-size: 11px;
-      color: #656853;
-      margin: 13px 0 0;
-    }
-
-    /* --------------------------------
-       WHAT'S INCLUDED
-    -------------------------------- */
-
-    .included-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-      border-top: 1px solid var(--border);
-      border-left: 1px solid var(--border);
-    }
-
-    .included-item {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      min-height: 76px;
-      padding: 18px 20px;
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .check {
-      flex: 0 0 auto;
-      width: 22px;
-      height: 22px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: #e8e8e1;
-      color: #55564f;
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    /* --------------------------------
-       FINAL CTA
-    -------------------------------- */
-
-    .final-section {
-      padding: 100px 0;
-    }
-
-    .final-box {
-      text-align: center;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .final-box h2 {
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(43px, 6vw, 72px);
-      line-height: 1;
       letter-spacing: -0.06em;
-      margin-bottom: 22px;
+      font-weight: 500;
     }
 
-    .final-box p {
-      max-width: 620px;
-      margin: 0 auto 30px;
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.7;
+    .lead-list-copy {
+      max-width: 670px;
     }
 
-    .final-note {
-      margin-top: 15px;
-      color: #85857d;
-      font-size: 12px;
+    .lead-list-copy p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #cbc9c2;
+      margin-bottom: 24px;
     }
 
-    /* --------------------------------
-       FAQ
-    -------------------------------- */
-
-    .faq-section {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
+    .lead-list-copy p:first-child {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 35px;
+      line-height: 1.2;
+      color: var(--white);
     }
 
-    .faq-wrap {
-      max-width: 850px;
-      margin: auto;
+    .lead-list-quote {
+      margin-top: 50px;
+
+      padding: 30px;
+
+      background: var(--yellow);
+      color: var(--ink);
+
+      border: 2px solid var(--yellow);
+
+      box-shadow: 8px 8px 0 #383731;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 29px;
+      line-height: 1.3;
     }
 
-    .faq-item {
-      border-top: 1px solid var(--border);
+
+    /* =========================================================
+       DISCLAIMER
+    ========================================================= */
+
+    .objection {
+      padding: 125px 0;
     }
 
-    .faq-item:last-child {
-      border-bottom: 1px solid var(--border);
+    .objection-inner {
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .faq-question {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 25px 0;
-      border: none;
-      background: none;
-      text-align: left;
-      color: var(--text);
-      cursor: pointer;
-      font-family: "Manrope", sans-serif;
-      font-size: 17px;
-      font-weight: 700;
+    .objection h2 {
+      margin-top: 20px;
+      margin-bottom: 40px;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(47px, 6vw, 80px);
+      line-height: 0.94;
+
+      letter-spacing: -0.065em;
+      font-weight: 500;
+    }
+
+    .objection h2 span {
+      background: var(--yellow);
+      padding: 0 7px;
+    }
+
+    .objection p {
+      max-width: 700px;
+
+      font-size: 18px;
+      line-height: 1.8;
+
+      color: #504e48;
+
+      margin-bottom: 24px;
+    }
+
+    .objection-final {
+      margin-top: 50px;
+
+      max-width: 800px;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(27px, 3.3vw, 40px);
+      line-height: 1.25;
+
       letter-spacing: -0.025em;
     }
 
-    .faq-icon {
-      flex: 0 0 auto;
-      width: 30px;
-      height: 30px;
+
+    /* =========================================================
+       OUTCOME
+    ========================================================= */
+
+    .outcome {
+      background: var(--paper-2);
+
+      padding: 120px 0;
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .outcome-header {
+      max-width: 800px;
+      margin-bottom: 60px;
+    }
+
+    .outcome-header h2 {
+      margin-top: 20px;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(47px, 6vw, 76px);
+      line-height: 0.95;
+
+      letter-spacing: -0.065em;
+      font-weight: 500;
+    }
+
+    .time-grid {
       display: grid;
-      place-items: center;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      font-size: 18px;
-      font-weight: 400;
-      transition: transform 0.25s ease;
+      grid-template-columns: repeat(3, 1fr);
+
+      border-top: 1px solid var(--ink);
+      border-left: 1px solid var(--ink);
     }
 
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
+    .time-item {
+      min-height: 190px;
+
+      padding: 30px;
+
+      border-right: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+
+      background: var(--paper);
     }
 
-    .faq-answer p {
-      max-width: 700px;
-      padding-bottom: 25px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.75;
+    .time-item:nth-child(2),
+    .time-item:nth-child(4),
+    .time-item:nth-child(6) {
+      background: var(--yellow);
     }
 
-    .faq-item.active .faq-icon {
-      transform: rotate(45deg);
-    }
+    .time-item span {
+      display: block;
 
-    /* --------------------------------
-       FOOTER
-    -------------------------------- */
+      margin-bottom: 28px;
 
-    footer {
-      background: var(--dark);
-      color: white;
-      padding: 65px 0 30px;
-    }
-
-    .footer-top {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 50px;
-      padding-bottom: 65px;
-      border-bottom: 1px solid #373834;
-    }
-
-    .footer-brand p {
-      max-width: 280px;
-      margin-top: 17px;
-      color: #999a93;
-      font-size: 13px;
-      line-height: 1.7;
-    }
-
-    .footer-column h4 {
-      margin-bottom: 18px;
-      color: #7e7f78;
       font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
+      font-weight: 900;
+
+      letter-spacing: 0.13em;
       text-transform: uppercase;
     }
 
-    .footer-column a {
-      display: block;
-      width: fit-content;
-      margin-bottom: 10px;
-      color: #c5c6bf;
-      font-size: 13px;
-      transition: color 0.2s ease;
+    .time-item p {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 23px;
+      line-height: 1.3;
+
+      letter-spacing: -0.025em;
     }
 
-    .footer-column a:hover {
-      color: white;
+    .outcome-statement {
+      max-width: 850px;
+
+      margin-top: 65px;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(29px, 4vw, 46px);
+      line-height: 1.2;
+
+      letter-spacing: -0.04em;
     }
 
-    .footer-email {
-      color: var(--accent) !important;
-      word-break: break-word;
+
+    /* =========================================================
+       HOW IT WORKS
+    ========================================================= */
+
+    .how {
+      padding: 120px 0;
     }
 
-    .footer-bottom {
+    .how-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 100px;
+    }
+
+    .how h2 {
+      margin-top: 20px;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(46px, 5.5vw, 70px);
+      line-height: 0.96;
+
+      letter-spacing: -0.06em;
+      font-weight: 500;
+    }
+
+    .steps {
+      border-top: 2px solid var(--ink);
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 65px 1fr;
+      gap: 25px;
+
+      padding: 30px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding-top: 25px;
-      color: #74756e;
+      justify-content: center;
+
+      background: var(--yellow);
+
+      border: 1px solid var(--ink);
+
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .step h3 {
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .step p {
+      max-width: 600px;
+
+      color: var(--muted);
+
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
+
+    .final {
+      background: var(--ink);
+      color: var(--white);
+
+      padding: 135px 0 110px;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final::before {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      left: -250px;
+      bottom: -260px;
+
+      border-radius: 50%;
+
+      background: var(--yellow);
+    }
+
+    .final-inner {
+      max-width: 950px;
+      margin: 0 auto;
+
+      position: relative;
+      z-index: 1;
+    }
+
+    .final h2 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(54px, 7.5vw, 96px);
+      line-height: 0.9;
+
+      letter-spacing: -0.075em;
+      font-weight: 500;
+
+      margin-bottom: 40px;
+    }
+
+    .final h2 em {
+      font-style: italic;
+      color: var(--yellow);
+    }
+
+    .final p {
+      max-width: 670px;
+
+      color: #c9c7c0;
+
+      font-size: 18px;
+      line-height: 1.75;
+
+      margin-bottom: 22px;
+    }
+
+    .final .button {
+      margin-top: 15px;
+    }
+
+    .final-note {
+      margin-top: 18px;
+
+      color: #77756f;
+
       font-size: 11px;
     }
 
-    /* --------------------------------
-       REVEAL ANIMATION
-    -------------------------------- */
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition:
-        opacity 0.65s ease,
-        transform 0.65s ease;
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      background: var(--ink);
+      color: var(--white);
+
+      border-top: 1px solid #292824;
+
+      padding: 35px 0;
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
     }
 
-    /* --------------------------------
-       MOBILE
-    -------------------------------- */
+    .footer-logo {
+      font-size: 19px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
 
-    @media (max-width: 1050px) {
-      .hero-grid {
-        gap: 35px;
+    .footer-description {
+      margin-top: 8px;
+
+      color: #77756f;
+
+      font-size: 12px;
+    }
+
+    .footer-right {
+      text-align: right;
+
+      color: #77756f;
+
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .footer-right a {
+      color: #bcbab3;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 950px) {
+
+      .hero-grid,
+      .intro-grid,
+      .story-grid,
+      .different-grid,
+      .lead-list-grid,
+      .how-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
       }
 
-      .nav-links {
-        gap: 18px;
-        margin-right: 18px;
+      .hero {
+        padding-top: 80px;
       }
 
-      .types-grid,
+      .hero h1 {
+        max-width: 800px;
+      }
+
       .opportunity-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .opportunity-card {
+        max-width: 650px;
+      }
+
+      .opportunities-heading {
+        display: block;
+      }
+
+      .opportunities-heading p {
+        margin-top: 25px;
+      }
+
+      .time-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .audience-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-top {
-        grid-template-columns: 2fr 1fr 1fr;
+      .intro::after {
+        font-size: 100px;
       }
     }
 
-    @media (max-width: 800px) {
-      :root {
-        --nav-height: 68px;
-      }
+
+    @media (max-width: 600px) {
 
       .container {
-        width: min(var(--max-width), calc(100% - 28px));
+        width: min(100% - 32px, var(--max-width));
       }
 
-      .nav-links {
-        position: absolute;
-        top: calc(100% + 1px);
-        left: 0;
-        right: 0;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 10px 14px 18px;
-        background: rgba(247, 246, 242, 0.98);
-        border-bottom: 1px solid var(--border);
-        box-shadow: var(--shadow-md);
-        margin: 0;
+      .nav {
+        min-height: 68px;
       }
 
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 14px 10px;
-      }
-
-      .nav-cta {
+      .nav-link {
         display: none;
       }
 
-      .mobile-toggle {
-        display: block;
+      .nav .button {
+        padding: 10px 13px;
+        font-size: 11px;
+      }
+
+      .logo {
+        font-size: 20px;
       }
 
       .hero {
         padding: 65px 0 70px;
       }
 
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
       .hero h1 {
-        font-size: clamp(48px, 14vw, 70px);
+        font-size: 53px;
+        line-height: 0.94;
       }
 
-      .opportunity-visual {
-        min-height: 450px;
-        max-width: 600px;
-        width: 100%;
-        margin: 15px auto 0;
-      }
-
-      .section {
-        padding: 75px 0;
-      }
-
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .step {
-        padding-right: 0;
-        padding-bottom: 50px;
-      }
-
-      .step:not(:last-child)::after {
-        display: none;
-      }
-
-      .database-box {
-        padding: 45px 28px;
-        border-radius: 22px;
-      }
-
-      .included-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-top {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .hero-description {
+      .hero-copy p {
         font-size: 16px;
       }
 
-      .hero-secondary {
-        font-size: 14px;
+      .hero-copy p:first-child {
+        font-size: 19px;
       }
 
-      .hero-actions .btn {
-        width: 100%;
+      .hero-bottom {
+        margin-top: 55px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
       }
 
-      .opportunity-visual {
-        min-height: 390px;
-        transform: scale(0.92);
-        transform-origin: top center;
-        margin-bottom: -35px;
+      .intro,
+      .story,
+      .different,
+      .opportunities,
+      .lead-list,
+      .objection,
+      .outcome,
+      .how {
+        padding: 85px 0;
       }
 
-      .visual-card {
-        width: 270px;
+      .intro h2,
+      .story h2,
+      .different h2,
+      .lead-list h2,
+      .how h2 {
+        font-size: 47px;
       }
 
-      .visual-card:nth-of-type(2) {
-        left: 0;
+      .intro-copy > p,
+      .story-copy p,
+      .different-copy p,
+      .objection p {
+        font-size: 16px;
       }
 
-      .visual-card:nth-of-type(3) {
-        right: 0;
+      .story-question {
+        padding: 25px;
+        box-shadow: 6px 6px 0 var(--ink);
       }
 
-      .visual-card:nth-of-type(4) {
-        left: 25px;
+      .story-question p {
+        font-size: 25px;
       }
 
-      .types-grid,
-      .opportunity-grid,
-      .audience-grid,
-      .why-grid {
+      .opportunities-heading h2,
+      .outcome-header h2 {
+        font-size: 49px;
+      }
+
+      .opportunity-content {
+        padding: 23px;
+      }
+
+      .lead-list-copy p:first-child {
+        font-size: 29px;
+      }
+
+      .lead-list-quote {
+        font-size: 25px;
+        padding: 24px;
+      }
+
+      .objection h2 {
+        font-size: 50px;
+      }
+
+      .objection-final {
+        font-size: 27px;
+      }
+
+      .time-grid {
         grid-template-columns: 1fr;
       }
 
-      .type-card {
+      .time-item {
         min-height: auto;
+        padding: 25px;
       }
 
-      .audience-card {
-        min-height: 220px;
+      .time-item p {
+        font-size: 21px;
       }
 
-      .audience-icon {
-        margin-bottom: 45px;
+      .outcome-statement {
+        font-size: 30px;
       }
 
-      .included-grid {
-        grid-template-columns: 1fr;
+      .step {
+        grid-template-columns: 50px 1fr;
+        gap: 18px;
       }
 
-      .database-box h2 {
-        font-size: 39px;
+      .final {
+        padding: 90px 0 75px;
       }
 
-      .final-box h2 {
-        font-size: 45px;
+      .final h2 {
+        font-size: 53px;
       }
 
-      .footer-top {
-        grid-template-columns: 1fr;
-        gap: 35px;
+      .final p {
+        font-size: 16px;
       }
 
-      .footer-bottom {
+      .footer-grid {
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .footer-right {
+        text-align: left;
+      }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- =====================================
-       NAVIGATION
-  ====================================== -->
 
-  <header class="site-header">
-    <div class="container">
-      <nav class="nav" aria-label="Main navigation">
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
 
-        <a href="#top" class="logo" aria-label="Plainsight Deals home">
-          <span class="logo-mark">P</span>
-          Plainsight Deals
+  <header>
+
+    <div class="container nav">
+
+      <a href="#" class="logo">
+        <span class="logo-mark"></span>
+        Plainsight Deals
+      </a>
+
+      <div class="nav-right">
+
+        <a href="#how-it-works" class="nav-link">
+          How it works
         </a>
 
-        <div class="nav-links" id="navLinks">
-          <a href="#opportunities">Opportunities</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#who-its-for">Who It's For</a>
-          <a href="#faq">FAQ</a>
-        </div>
-
         <a
-          class="btn btn-primary nav-cta"
           href="https://forms.gle/6KdfjkxewASBnSk87"
           target="_blank"
           rel="noopener noreferrer"
+          class="button"
         >
           See Active Opportunities
           <span class="arrow">→</span>
         </a>
 
-        <button
-          class="mobile-toggle"
-          id="mobileToggle"
-          aria-label="Open navigation menu"
-          aria-expanded="false"
-        ></button>
+      </div>
 
-      </nav>
     </div>
+
   </header>
 
 
-  <main id="top">
+  <main>
 
-    <!-- =====================================
+
+    <!-- =====================================================
          HERO
-    ====================================== -->
+    ====================================================== -->
 
     <section class="hero">
+
       <div class="container">
+
         <div class="hero-grid">
 
-          <div class="hero-copy reveal">
+          <div>
 
             <div class="eyebrow">
-              OPPORTUNITIES WORTH PURSUING
+              For agencies & service businesses
             </div>
 
             <h1>
-              Find Opportunities Worth Pitching
+              Find the projects you
+              <span class="highlight">didn't know</span>
+              were out there.
             </h1>
 
-            <p class="hero-description">
-              A steady stream of real projects, contracts, and RFPs —
-              without spending hours looking for them.
-            </p>
-
-            <p class="hero-secondary">
-              Plainsight Deals helps agencies and service providers
-              discover active opportunities from organizations looking
-              for outside expertise.
-            </p>
-
-            <div class="hero-actions">
-
-              <a
-                class="btn btn-primary"
-                href="https://forms.gle/6KdfjkxewASBnSk87"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                See Active Opportunities
-                <span class="arrow">→</span>
-              </a>
-
-              <div class="hero-note">
-                See the kinds of opportunities we're finding before you request access.
-              </div>
-
-            </div>
-
           </div>
 
 
-          <!-- Opportunity visual -->
-
-          <div class="opportunity-visual reveal">
-
-            <div class="visual-glow"></div>
-
-            <div class="visual-label">
-              OPPORTUNITY DISCOVERY
-            </div>
-
-            <div class="visual-card">
-
-              <div class="mini-category">
-                WEBSITE & DIGITAL
-              </div>
-
-              <h3>Website Redesign & Digital Experience</h3>
-
-              <div class="mini-row">
-                <span>Organization</span>
-                <span>Sample Organization</span>
-              </div>
-
-              <div class="mini-row">
-                <span>Budget</span>
-                <span>$50K+</span>
-              </div>
-
-              <div class="mini-row">
-                <span>Deadline</span>
-                <span>Oct. 24</span>
-              </div>
-
-            </div>
-
-
-            <div class="visual-card">
-
-              <div class="mini-category">
-                SOFTWARE DEVELOPMENT
-              </div>
-
-              <h3>Custom Application Development</h3>
-
-              <div class="mini-row">
-                <span>Organization</span>
-                <span>Sample Organization</span>
-              </div>
-
-              <div class="mini-row">
-                <span>Service</span>
-                <span>Development</span>
-              </div>
-
-              <div class="mini-row">
-                <span>Status</span>
-                <span>Open</span>
-              </div>
-
-            </div>
-
-
-            <div class="visual-card">
-
-              <div class="mini-category">
-                MARKETING & CREATIVE
-              </div>
-
-              <h3>Brand & Digital Marketing Services</h3>
-
-              <div class="mini-row">
-                <span>Organization</span>
-                <span>Sample Organization</span>
-              </div>
-
-              <div class="mini-row">
-                <span>Services</span>
-                <span>Marketing</span>
-              </div>
-
-              <div class="mini-row">
-                <span>Deadline</span>
-                <span>Nov. 08</span>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- =====================================
-         OPPORTUNITY TYPES
-    ====================================== -->
-
-    <section class="section types-section" id="opportunities">
-
-      <div class="container">
-
-        <div class="section-header reveal">
-
-          <div class="section-kicker">
-            THE OPPORTUNITIES
-          </div>
-
-          <h2 class="section-title">
-            What Kind of Opportunities Are Inside?
-          </h2>
-
-          <p class="section-subtitle">
-            Not every opportunity is the same. That's the point.
-          </p>
-
-        </div>
-
-
-        <div class="types-grid">
-
-          <article class="type-card reveal">
-            <div class="icon-box">⌘</div>
-            <h3>Technology & Software</h3>
-            <p>
-              Software development, websites, applications, IT services,
-              technology implementations, and digital transformation projects.
-            </p>
-          </article>
-
-          <article class="type-card reveal">
-            <div class="icon-box">✦</div>
-            <h3>Design & Creative</h3>
-            <p>
-              Branding, UX/UI, graphic design, video, creative production,
-              and digital experience opportunities.
-            </p>
-          </article>
-
-          <article class="type-card reveal">
-            <div class="icon-box">↗</div>
-            <h3>Marketing & Growth</h3>
-            <p>
-              Marketing, communications, content, SEO, digital campaigns,
-              and growth-focused projects.
-            </p>
-          </article>
-
-          <article class="type-card reveal">
-            <div class="icon-box">◎</div>
-            <h3>Consulting & Professional Services</h3>
-            <p>
-              Strategy, research, management, technology consulting,
-              and specialized professional services.
-            </p>
-          </article>
-
-          <article class="type-card reveal">
-            <div class="icon-box">◇</div>
-            <h3>Public & Nonprofit Projects</h3>
-            <p>
-              Opportunities from nonprofits, educational institutions,
-              public organizations, and other mission-driven buyers.
-            </p>
-          </article>
-
-          <article class="type-card reveal">
-            <div class="icon-box">≡</div>
-            <h3>Projects With Defined Requirements</h3>
-            <p>
-              Opportunities where the organization has articulated a
-              project, need, scope, or set of requirements.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================
-         SAMPLE OPPORTUNITIES
-    ====================================== -->
-
-    <section class="section opportunities-section">
-
-      <div class="container">
-
-        <div class="section-header reveal">
-
-          <div class="section-kicker">
-            A PREVIEW
-          </div>
-
-          <h2 class="section-title">
-            See the Kind of Opportunities We Find
-          </h2>
-
-          <p class="section-subtitle">
-            A preview of the projects that can appear in Plainsight Deals.
-          </p>
-
-        </div>
-
-        <div class="sample-notice reveal">
-          <span></span>
-          Sample Opportunity — examples shown for illustration
-        </div>
-
-        <div
-          class="opportunity-grid"
-          id="opportunityGrid"
-        ></div>
-
-
-        <div class="examples-cta reveal">
-
-          <a
-            class="btn btn-primary"
-            href="https://forms.gle/6KdfjkxewASBnSk87"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            See Active Opportunities
-            <span class="arrow">→</span>
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================
-         WHY PLAINSIGHT
-    ====================================== -->
-
-    <section class="section why-section">
-
-      <div class="container">
-
-        <div class="section-header reveal">
-
-          <div class="section-kicker">
-            WHY PLAINSIGHT DEALS
-          </div>
-
-          <h2 class="section-title">
-            The opportunities are already out there. Finding the good ones is the hard part.
-          </h2>
-
-          <p class="section-subtitle">
-            There are thousands of RFPs, procurement notices, project
-            announcements, and other opportunities published across the web.
-            The challenge is finding the ones worth your time.
-          </p>
-
-        </div>
-
-
-        <div class="why-grid">
-
-          <article class="why-item reveal">
-            <div class="why-number">01</div>
-            <h3>We do the searching</h3>
-            <p>
-              Instead of checking dozens of websites every day, use
-              Plainsight Deals as a shortcut to opportunities worth investigating.
-            </p>
-          </article>
-
-          <article class="why-item reveal">
-            <div class="why-number">02</div>
-            <h3>We focus on actionable opportunities</h3>
-            <p>
-              Prioritize opportunities where there is a clear project,
-              defined need, and an organization actively looking for a provider.
-            </p>
-          </article>
-
-          <article class="why-item reveal">
-            <div class="why-number">03</div>
-            <h3>Quickly understand the opportunity</h3>
-            <p>
-              Important information is organized so you can determine
-              whether something is worth pursuing.
-            </p>
-          </article>
-
-          <article class="why-item reveal">
-            <div class="why-number">04</div>
-            <h3>Find bigger opportunities</h3>
-            <p>
-              Surface substantial projects and professional-services
-              opportunities that can potentially make a meaningful
-              difference to your pipeline.
-            </p>
-          </article>
-
-          <article class="why-item reveal">
-            <div class="why-number">05</div>
-            <h3>Know the deadline</h3>
-            <p>
-              See the relevant submission deadline whenever it is available.
-            </p>
-          </article>
-
-          <article class="why-item reveal">
-            <div class="why-number">06</div>
-            <h3>Get direct opportunity information</h3>
-            <p>
-              Where available, see the organization, project details,
-              requirements, deadline, and relevant contact information.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================
-         WHO IT'S FOR
-    ====================================== -->
-
-    <section class="section" id="who-its-for">
-
-      <div class="container">
-
-        <div class="section-header center reveal">
-
-          <div class="section-kicker">
-            WHO IT'S FOR
-          </div>
-
-          <h2 class="section-title">
-            Built for Agencies & Service Providers
-          </h2>
-
-          <p class="section-subtitle">
-            Plainsight Deals is for teams that sell expertise.
-          </p>
-
-        </div>
-
-
-        <div class="audience-grid">
-
-          <article class="audience-card reveal">
-            <div class="audience-icon">◩</div>
-            <h3>Web & Software Agencies</h3>
-            <p>
-              Website, application, IT, and software development projects.
-            </p>
-          </article>
-
-          <article class="audience-card reveal">
-            <div class="audience-icon">↗</div>
-            <h3>Marketing Agencies</h3>
-            <p>
-              Marketing, communications, content, and digital opportunities.
-            </p>
-          </article>
-
-          <article class="audience-card reveal">
-            <div class="audience-icon">✦</div>
-            <h3>Creative Agencies</h3>
-            <p>
-              Branding, design, video, UX/UI, and creative projects.
-            </p>
-          </article>
-
-          <article class="audience-card reveal">
-            <div class="audience-icon">◎</div>
-            <h3>Consultancies</h3>
-            <p>
-              Strategy, research, management, technology, and
-              professional-services opportunities.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================
-         HOW IT WORKS
-    ====================================== -->
-
-    <section class="section how-section" id="how-it-works">
-
-      <div class="container">
-
-        <div class="section-header reveal">
-
-          <div class="section-kicker">
-            HOW IT WORKS
-          </div>
-
-          <h2 class="section-title">
-            Three steps between you and your next opportunity.
-          </h2>
-
-        </div>
-
-
-        <div class="steps">
-
-          <article class="step reveal">
-
-            <div class="step-number">01</div>
-
-            <h3>Discover</h3>
+          <div class="hero-copy">
 
             <p>
-              We search across a wide range of sources for organizations
-              actively looking for outside providers.
+              If you run an agency or a service business,
+              you probably know the feeling.
+              You need more work. So you start looking.
             </p>
 
-          </article>
-
-
-          <article class="step reveal">
-
-            <div class="step-number">02</div>
-
-            <h3>Evaluate</h3>
-
             <p>
-              Review the project, organization, scope, deadline,
-              budget information, and other available details.
+              You search Google. Check LinkedIn. Browse job boards.
+              Look through opportunity websites. Search for companies
+              that might need what you do.
             </p>
 
-          </article>
-
-
-          <article class="step reveal">
-
-            <div class="step-number">03</div>
-
-            <h3>Pitch</h3>
-
             <p>
-              If it's a fit for your business, pursue the opportunity
-              directly with the organization.
-            </p>
-
-          </article>
-
-        </div>
-
-
-        <div class="no-commission reveal">
-          No lead brokerage. No commissions on your projects.
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================
-         DATABASE CTA
-    ====================================== -->
-
-    <section class="database-section">
-
-      <div class="container">
-
-        <div class="database-box reveal">
-
-          <div class="database-content">
-
-            <div class="section-kicker">
-              SEE WHAT'S ACTIVE
-            </div>
-
-            <h2>
-              Want to See What's Active Right Now?
-            </h2>
-
-            <p>
-              Don't take our word for it. Look at the opportunities.
-              We maintain a database of currently active opportunities
-              that you can review before deciding whether Plainsight Deals
-              is right for you.
+              And after an hour or two, you've found a lot of things.
+              Just not many things worth pursuing.
             </p>
 
             <a
-              class="btn btn-primary"
               href="https://forms.gle/6KdfjkxewASBnSk87"
               target="_blank"
               rel="noopener noreferrer"
+              class="button"
             >
               See Active Opportunities
               <span class="arrow">→</span>
             </a>
 
-            <p class="small-text">
-              You'll be asked for a few details about your business so
-              we can understand who we're opening the database to.
+            <div class="hero-note">
+              Real projects. Real organizations. Real deadlines.
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-bottom">
+
+          <div class="hero-bottom-left">
+            WEBSITE · SOFTWARE · MARKETING · SEO · DESIGN · CONSULTING
+          </div>
+
+          <div class="hero-bottom-right">
+            The work exists. Finding it is the hard part.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROBLEM
+    ====================================================== -->
+
+    <section class="intro">
+
+      <div class="container intro-grid">
+
+        <div>
+
+          <div class="eyebrow yellow">
+            The problem
+          </div>
+
+          <h2>
+            There is a lot of work out there.
+            <br><br>
+            It's just scattered everywhere.
+          </h2>
+
+        </div>
+
+
+        <div class="intro-copy">
+
+          <p>
+            The frustrating part is that there are organizations
+            out there spending real money on websites, software,
+            marketing, SEO, design and consulting.
+          </p>
+
+          <p>
+            They're looking for someone.
+            You just weren't there when they started looking.
+          </p>
+
+
+          <div class="example-list">
+
+            <div class="example">
+              <div class="example-number">01</div>
+              <p>
+                A nonprofit posts a website project on its own website.
+              </p>
+            </div>
+
+            <div class="example">
+              <div class="example-number">02</div>
+              <p>
+                A university starts looking for a software partner.
+              </p>
+            </div>
+
+            <div class="example">
+              <div class="example-number">03</div>
+              <p>
+                A company needs help with SEO but never posts about it on LinkedIn.
+              </p>
+            </div>
+
+            <div class="example">
+              <div class="example-number">04</div>
+              <p>
+                An association needs someone to build a new digital platform.
+              </p>
+            </div>
+
+            <div class="example">
+              <div class="example-number">05</div>
+              <p>
+                A healthcare organization wants to redesign its website.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STORY
+    ====================================================== -->
+
+    <section class="story">
+
+      <div class="container story-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            Why Plainsight exists
+          </div>
+
+          <h2>
+            So we started looking.
+          </h2>
+
+        </div>
+
+
+        <div class="story-copy">
+
+          <p>
+            Plainsight Deals came from a pretty simple idea.
+          </p>
+
+          <div class="story-question">
+
+            <p>
+              What if someone just spent the time finding these projects?
+            </p>
+
+          </div>
+
+          <p>
+            Not another directory with thousands of listings.
+            Not a giant database where you have to dig through
+            hundreds of irrelevant opportunities.
+          </p>
+
+          <p>
+            And not another platform telling you that you need
+            to “10x your pipeline.”
+          </p>
+
+          <p>
+            Just someone looking around the internet for organizations
+            that are actually looking for help.
+          </p>
+
+          <p>
+            Then putting the interesting ones in one place.
+          </p>
+
+          <p>
+            So when you have time to look for your next project,
+            you don't have to start from zero.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DIFFERENT
+    ====================================================== -->
+
+    <section class="different">
+
+      <div class="container different-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            What we look for
+          </div>
+
+          <h2>
+            We're not only looking at government contracts.
+          </h2>
+
+        </div>
+
+
+        <div class="different-copy">
+
+          <p>
+            Government work can be great.
+            But not every agency wants to spend their afternoon
+            reading a 60-page procurement document, figuring out
+            compliance requirements and trying to understand
+            a complicated bidding process.
+          </p>
+
+          <p>
+            There are plenty of organizations outside of government
+            that need good people too.
+          </p>
+
+          <p>
+            Nonprofits. Private companies. Universities.
+            Foundations. Healthcare organizations. Associations.
+            Education organizations.
+          </p>
+
+          <p>
+            They need websites, software, marketing, SEO, branding,
+            digital transformation and consulting.
+          </p>
+
+          <p>
+            Those are the opportunities we're interested in.
+          </p>
+
+
+          <div class="service-tags">
+
+            <span class="service-tag">Website projects</span>
+            <span class="service-tag">Software</span>
+            <span class="service-tag">SEO</span>
+            <span class="service-tag">AEO</span>
+            <span class="service-tag">Digital marketing</span>
+            <span class="service-tag">Branding</span>
+            <span class="service-tag">Design</span>
+            <span class="service-tag">Consulting</span>
+            <span class="service-tag">Digital transformation</span>
+            <span class="service-tag">And more</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OPPORTUNITIES
+    ====================================================== -->
+
+    <section class="opportunities">
+
+      <div class="container">
+
+        <div class="opportunities-heading">
+
+          <div>
+
+            <div class="eyebrow">
+              A few examples
+            </div>
+
+            <h2>
+              The kind of thing you might find.
+            </h2>
+
+          </div>
+
+          <p>
+            These aren't hypothetical business problems.
+            They're the kinds of projects organizations put out
+            when they're actually looking for someone.
+          </p>
+
+        </div>
+
+
+        <div class="opportunity-grid">
+
+
+          <!-- CARD 1 -->
+
+          <article class="opportunity-card">
+
+            <div class="opportunity-image one">
+
+              <div class="opportunity-number">
+                01
+              </div>
+
+            </div>
+
+            <div class="opportunity-content">
+
+              <div class="opportunity-label">
+                Website
+              </div>
+
+              <h3>
+                A nonprofit needs a new website.
+              </h3>
+
+              <p>
+                A real organization looking for someone to help
+                rethink, redesign and rebuild its online presence.
+              </p>
+
+              <div class="opportunity-fit">
+                <strong>Good fit:</strong>
+                Web design · UX · Development
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- CARD 2 -->
+
+          <article class="opportunity-card">
+
+            <div class="opportunity-image two">
+
+              <div class="opportunity-number">
+                02
+              </div>
+
+            </div>
+
+            <div class="opportunity-content">
+
+              <div class="opportunity-label">
+                Software
+              </div>
+
+              <h3>
+                A company has outgrown its software.
+              </h3>
+
+              <p>
+                An organization needs help building, improving
+                or replacing a digital product or internal system.
+              </p>
+
+              <div class="opportunity-fit">
+                <strong>Good fit:</strong>
+                Software development · Product design · Engineering
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- CARD 3 -->
+
+          <article class="opportunity-card">
+
+            <div class="opportunity-image three">
+
+              <div class="opportunity-number">
+                03
+              </div>
+
+            </div>
+
+            <div class="opportunity-content">
+
+              <div class="opportunity-label">
+                Marketing
+              </div>
+
+              <h3>
+                An organization wants to become easier to find online.
+              </h3>
+
+              <p>
+                A project around search visibility, content,
+                digital marketing or the newer world of AEO.
+              </p>
+
+              <div class="opportunity-fit">
+                <strong>Good fit:</strong>
+                SEO · AEO · Content · Digital marketing
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LEAD LIST
+    ====================================================== -->
+
+    <section class="lead-list">
+
+      <div class="container lead-list-grid">
+
+        <div>
+
+          <div class="eyebrow yellow">
+            The difference
+          </div>
+
+          <h2>
+            You don't need another lead list.
+          </h2>
+
+        </div>
+
+
+        <div class="lead-list-copy">
+
+          <p>
+            You need something worth pitching.
+          </p>
+
+          <p>
+            There are plenty of places where you can find “leads.”
+            Thousands of companies. Millions of contacts.
+            Endless lists.
+          </p>
+
+          <p>
+            But knowing that a company exists isn't particularly useful.
+          </p>
+
+          <p>
+            Knowing that a company is actively looking for someone
+            to solve a problem you know how to solve is different.
+          </p>
+
+          <div class="lead-list-quote">
+            That's the kind of opportunity we're looking for.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DISCLAIMER
+    ====================================================== -->
+
+    <section class="objection">
+
+      <div class="container">
+
+        <div class="objection-inner">
+
+          <div class="eyebrow">
+            A small disclaimer
+          </div>
+
+          <h2>
+            And no, we can't promise you'll <span>win.</span>
+          </h2>
+
+          <p>
+            We don't think you need another website promising that.
+          </p>
+
+          <p>
+            Other agencies may see the same opportunity.
+            Some opportunities will be a bad fit.
+            Some organizations won't respond.
+            Some proposals will lose.
+          </p>
+
+          <p>
+            That's sales.
+          </p>
+
+          <p>
+            The point isn't to remove all of that.
+            The point is to make sure you actually have
+            something worth pitching in the first place.
+          </p>
+
+          <div class="objection-final">
+            Because spending two hours searching for an opportunity
+            isn't the same as spending two hours working on one.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OUTCOME
+    ====================================================== -->
+
+    <section class="outcome">
+
+      <div class="container">
+
+        <div class="outcome-header">
+
+          <div class="eyebrow">
+            The outcome
+          </div>
+
+          <h2>
+            Think about what you could do with those hours.
+          </h2>
+
+        </div>
+
+
+        <div class="time-grid">
+
+          <div class="time-item">
+
+            <span>Instead of</span>
+
+            <p>
+              Searching Google for another hour.
+            </p>
+
+          </div>
+
+          <div class="time-item">
+
+            <span>You could</span>
+
+            <p>
+              Look at an actual project and decide if it's worth pursuing.
+            </p>
+
+          </div>
+
+          <div class="time-item">
+
+            <span>Instead of</span>
+
+            <p>
+              Opening dozens of tabs and irrelevant listings.
+            </p>
+
+          </div>
+
+          <div class="time-item">
+
+            <span>You could</span>
+
+            <p>
+              Talk to your team about something that actually fits.
+            </p>
+
+          </div>
+
+          <div class="time-item">
+
+            <span>Instead of</span>
+
+            <p>
+              Starting your search from zero every time.
+            </p>
+
+          </div>
+
+          <div class="time-item">
+
+            <span>You could</span>
+
+            <p>
+              Spend that time writing a proposal or making the call.
             </p>
 
           </div>
 
         </div>
 
-      </div>
 
-    </section>
-
-
-    <!-- =====================================
-         WHAT'S INCLUDED
-    ====================================== -->
-
-    <section class="section" id="included">
-
-      <div class="container">
-
-        <div class="section-header center reveal">
-
-          <div class="section-kicker">
-            OPPORTUNITY DETAILS
-          </div>
-
-          <h2 class="section-title">
-            What You'll Find in an Opportunity
-          </h2>
-
-          <p class="section-subtitle">
-            Everything you need to answer one question quickly:
-            "Is this worth pursuing?"
-          </p>
-
-        </div>
-
-
-        <div class="included-grid">
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Organization / buyer
-          </div>
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Project title
-          </div>
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Opportunity type
-          </div>
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Service category
-          </div>
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Location
-          </div>
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Budget or estimated value
-          </div>
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Project description
-          </div>
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Scope of work
-          </div>
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Proposal deadline
-          </div>
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Contact information
-          </div>
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Source / solicitation details
-          </div>
-
-          <div class="included-item reveal">
-            <span class="check">✓</span>
-            Relevant documents and links
-          </div>
-
+        <div class="outcome-statement">
+          That's the outcome we're after.
+          Not more notifications. Not another dashboard.
+          Not another subscription you forget about.
+          <br><br>
+          More time spent pursuing work that could actually become revenue.
         </div>
 
       </div>
@@ -2058,41 +2083,152 @@
     </section>
 
 
-    <!-- =====================================
-         FINAL CTA
-    ====================================== -->
+    <!-- =====================================================
+         HOW IT WORKS
+    ====================================================== -->
 
-    <section class="final-section">
+    <section class="how" id="how-it-works">
 
-      <div class="container">
+      <div class="container how-grid">
 
-        <div class="final-box reveal">
+        <div>
 
-          <div class="section-kicker">
-            YOUR NEXT OPPORTUNITY
+          <div class="eyebrow">
+            How it fits
           </div>
 
           <h2>
-            Don't Spend Your Week Hunting for Projects
+            You don't need to change the way you sell.
+          </h2>
+
+        </div>
+
+
+        <div>
+
+          <div class="steps">
+
+            <div class="step">
+
+              <div class="step-number">
+                01
+              </div>
+
+              <div>
+
+                <h3>
+                  Open Plainsight.
+                </h3>
+
+                <p>
+                  When you're ready to look for your next project,
+                  come see what's out there.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="step">
+
+              <div class="step-number">
+                02
+              </div>
+
+              <div>
+
+                <h3>
+                  Find something that makes you stop.
+                </h3>
+
+                <p>
+                  Read through the opportunity, understand the need
+                  and decide whether it makes sense for your business.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="step">
+
+              <div class="step-number">
+                03
+              </div>
+
+              <div>
+
+                <h3>
+                  Go after it.
+                </h3>
+
+                <p>
+                  Talk to the organization, write your proposal,
+                  make your pitch and see where it goes.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL CTA
+    ====================================================== -->
+
+    <section class="final">
+
+      <div class="container">
+
+        <div class="final-inner">
+
+          <div class="eyebrow yellow">
+            Have a look
+          </div>
+
+          <h2>
+            The internet is full of opportunities.
+            <em>Most just aren't where you expect them to be.</em>
           </h2>
 
           <p>
-            Your next client could already be looking for exactly what
-            you sell. The challenge is finding them in time.
+            We're trying to make them easier to find.
+          </p>
+
+          <p>
+            If you're an agency, freelancer, consultant or service
+            business looking for your next project, take a look at
+            what's currently out there.
+          </p>
+
+          <p>
+            You might find nothing.
+            You might find something interesting.
+            And you might find the project that pays for the whole thing.
           </p>
 
           <a
-            class="btn btn-primary"
             href="https://forms.gle/6KdfjkxewASBnSk87"
             target="_blank"
             rel="noopener noreferrer"
+            class="button"
           >
             See Active Opportunities
             <span class="arrow">→</span>
           </a>
 
           <div class="final-note">
-            Find opportunities. Evaluate the fit. Make your pitch.
+            No complicated demo. Just have a look.
           </div>
 
         </div>
@@ -2101,225 +2237,47 @@
 
     </section>
 
-
-    <!-- =====================================
-         FAQ
-    ====================================== -->
-
-    <section class="section faq-section" id="faq">
-
-      <div class="container">
-
-        <div class="section-header center reveal">
-
-          <div class="section-kicker">
-            FAQ
-          </div>
-
-          <h2 class="section-title">
-            Questions, answered.
-          </h2>
-
-        </div>
-
-
-        <div class="faq-wrap">
-
-          <div class="faq-item reveal">
-
-            <button class="faq-question" aria-expanded="false">
-              <span>What is Plainsight Deals?</span>
-              <span class="faq-icon">+</span>
-            </button>
-
-            <div class="faq-answer">
-              <p>
-                Plainsight Deals is an opportunity database for agencies
-                and service providers. We find active projects, RFPs,
-                and other opportunities where organizations are looking
-                for outside expertise.
-              </p>
-            </div>
-
-          </div>
-
-
-          <div class="faq-item reveal">
-
-            <button class="faq-question" aria-expanded="false">
-              <span>Is Plainsight Deals only for government contracts?</span>
-              <span class="faq-icon">+</span>
-            </button>
-
-            <div class="faq-answer">
-              <p>
-                No. Opportunities can come from nonprofits, educational
-                institutions, public organizations, and other organizations
-                seeking professional services.
-              </p>
-            </div>
-
-          </div>
-
-
-          <div class="faq-item reveal">
-
-            <button class="faq-question" aria-expanded="false">
-              <span>What types of businesses can use Plainsight Deals?</span>
-              <span class="faq-icon">+</span>
-            </button>
-
-            <div class="faq-answer">
-              <p>
-                Web development companies, software agencies, marketing
-                agencies, design studios, consultants, IT companies,
-                creative agencies, and other professional service providers.
-              </p>
-            </div>
-
-          </div>
-
-
-          <div class="faq-item reveal">
-
-            <button class="faq-question" aria-expanded="false">
-              <span>Are these old opportunities?</span>
-              <span class="faq-icon">+</span>
-            </button>
-
-            <div class="faq-answer">
-              <p>
-                The focus is on active opportunities with a current
-                opportunity to respond or pursue the project.
-              </p>
-            </div>
-
-          </div>
-
-
-          <div class="faq-item reveal">
-
-            <button class="faq-question" aria-expanded="false">
-              <span>Can I see the opportunities before joining?</span>
-              <span class="faq-icon">+</span>
-            </button>
-
-            <div class="faq-answer">
-              <p>
-                The landing page provides examples of the types of
-                opportunities we share. Access to the current active
-                database is provided through the access request process.
-              </p>
-            </div>
-
-          </div>
-
-
-          <div class="faq-item reveal">
-
-            <button class="faq-question" aria-expanded="false">
-              <span>Do you guarantee that I'll win a project?</span>
-              <span class="faq-icon">+</span>
-            </button>
-
-            <div class="faq-answer">
-              <p>
-                No. Plainsight Deals provides opportunities, not guaranteed
-                contracts. Your proposal, pricing, capabilities, and fit
-                with the buyer determine the outcome.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
 
   </main>
 
 
-  <!-- =====================================
+  <!-- =======================================================
        FOOTER
-  ====================================== -->
+  ======================================================== -->
 
   <footer>
 
-    <div class="container">
+    <div class="container footer-grid">
 
-      <div class="footer-top">
+      <div>
 
-        <div class="footer-brand">
-
-          <a href="#top" class="logo">
-            <span class="logo-mark">P</span>
-            Plainsight Deals
-          </a>
-
-          <p>
-            Find opportunities. Evaluate the fit. Make your pitch.
-          </p>
-
+        <div class="footer-logo">
+          Plainsight Deals
         </div>
 
-
-        <div class="footer-column">
-
-          <h4>Explore</h4>
-
-          <a href="#opportunities">Opportunities</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#who-its-for">Who It's For</a>
-          <a href="#faq">FAQ</a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-          <h4>Legal</h4>
-
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms</a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-          <h4>Contact</h4>
-
-          <a
-            class="footer-email"
-            href="mailto:tushar@plainsightdeals.com"
-          >
-            tushar@plainsightdeals.com
-          </a>
-
-          <a
-            href="https://forms.gle/6KdfjkxewASBnSk87"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            See Active Opportunities →
-          </a>
-
+        <div class="footer-description">
+          Helping agencies and service businesses
+          find work worth pursuing.
         </div>
 
       </div>
 
 
-      <div class="footer-bottom">
+      <div class="footer-right">
 
-        <span>
-          © <span id="year"></span> Plainsight Deals
-        </span>
+        <div>
+          Website · Software · Marketing · SEO · AEO · Design · Consulting
+        </div>
 
-        <span>
-          Opportunity discovery for agencies & service providers.
-        </span>
+        <div>
+          <a href="mailto:tushar@plainsightdeals.com">
+            tushar@plainsightdeals.com
+          </a>
+        </div>
+
+        <div>
+          © 2026 Plainsight Deals
+        </div>
 
       </div>
 
@@ -2327,363 +2285,6 @@
 
   </footer>
 
-
-  <!-- =====================================
-       JAVASCRIPT
-  ====================================== -->
-
-  <script>
-
-    /*
-     * =====================================================
-     * SAMPLE OPPORTUNITY DATA
-     *
-     * Replace this array with your actual opportunity data
-     * when you're ready.
-     *
-     * Do NOT present sample data as real opportunities.
-     * =====================================================
-     */
-
-    const opportunities = [
-      {
-        category: "WEBSITE & DIGITAL",
-        title: "Website Redesign & Digital Experience",
-        organization: "Sample Organization",
-        budget: "$50,000+",
-        deadline: "Oct. 24",
-        location: "Remote",
-        services: ["Web Design", "UX/UI", "Development"]
-      },
-
-      {
-        category: "SOFTWARE DEVELOPMENT",
-        title: "Custom Application Development",
-        organization: "Sample Organization",
-        budget: "$75,000+",
-        deadline: "Nov. 06",
-        location: "United States",
-        services: ["Software", "Development", "API"]
-      },
-
-      {
-        category: "MARKETING & GROWTH",
-        title: "Digital Marketing Services",
-        organization: "Sample Organization",
-        budget: "$25,000+",
-        deadline: "Oct. 31",
-        location: "Remote",
-        services: ["Marketing", "Content", "Digital"]
-      },
-
-      {
-        category: "DESIGN & CREATIVE",
-        title: "Brand Identity & Creative Services",
-        organization: "Sample Organization",
-        budget: "$30,000+",
-        deadline: "Nov. 12",
-        location: "Remote",
-        services: ["Branding", "Design", "Creative"]
-      },
-
-      {
-        category: "IT SERVICES",
-        title: "Technology Consulting & IT Services",
-        organization: "Sample Organization",
-        budget: "$60,000+",
-        deadline: "Nov. 18",
-        location: "United States",
-        services: ["IT", "Consulting", "Technology"]
-      },
-
-      {
-        category: "CONSULTING",
-        title: "Strategy & Professional Services",
-        organization: "Sample Organization",
-        budget: "$40,000+",
-        deadline: "Dec. 02",
-        location: "Remote",
-        services: ["Strategy", "Research", "Consulting"]
-      }
-    ];
-
-
-    /*
-     * =====================================================
-     * RENDER OPPORTUNITY CARDS
-     * =====================================================
-     */
-
-    const opportunityGrid =
-      document.getElementById("opportunityGrid");
-
-    function renderOpportunities() {
-
-      opportunityGrid.innerHTML = opportunities
-        .map((opportunity) => {
-
-          const serviceTags = opportunity.services
-            .map(service => `<span>${service}</span>`)
-            .join("");
-
-          return `
-            <article class="opportunity-card reveal">
-
-              <div class="opportunity-top">
-
-                <div class="opportunity-category">
-
-                  <span class="category-label">
-                    ${opportunity.category}
-                  </span>
-
-                  <span class="sample-pill">
-                    Sample
-                  </span>
-
-                </div>
-
-                <h3>
-                  ${opportunity.title}
-                </h3>
-
-                <div class="organization">
-                  ${opportunity.organization}
-                </div>
-
-              </div>
-
-
-              <div class="opportunity-details">
-
-                <div class="detail">
-                  <span class="detail-label">Budget</span>
-                  <span class="detail-value">
-                    ${opportunity.budget}
-                  </span>
-                </div>
-
-                <div class="detail">
-                  <span class="detail-label">Deadline</span>
-                  <span class="detail-value">
-                    ${opportunity.deadline}
-                  </span>
-                </div>
-
-                <div class="detail">
-                  <span class="detail-label">Location</span>
-                  <span class="detail-value">
-                    ${opportunity.location}
-                  </span>
-                </div>
-
-                <div class="detail">
-                  <span class="detail-label">Status</span>
-                  <span class="detail-value">
-                    Open
-                  </span>
-                </div>
-
-              </div>
-
-
-              <div class="services">
-                ${serviceTags}
-              </div>
-
-
-              <a
-                class="opportunity-link"
-                href="https://forms.gle/6KdfjkxewASBnSk87"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>Request Access</span>
-                <span>→</span>
-              </a>
-
-            </article>
-          `;
-
-        })
-        .join("");
-
-    }
-
-    renderOpportunities();
-
-
-    /*
-     * =====================================================
-     * MOBILE NAVIGATION
-     * =====================================================
-     */
-
-    const mobileToggle =
-      document.getElementById("mobileToggle");
-
-    const navLinks =
-      document.getElementById("navLinks");
-
-    mobileToggle.addEventListener("click", () => {
-
-      const isOpen =
-        navLinks.classList.toggle("open");
-
-      mobileToggle.setAttribute(
-        "aria-expanded",
-        isOpen
-      );
-
-    });
-
-
-    // Close mobile menu after clicking a link
-
-    navLinks.querySelectorAll("a").forEach(link => {
-
-      link.addEventListener("click", () => {
-
-        navLinks.classList.remove("open");
-
-        mobileToggle.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      });
-
-    });
-
-
-    /*
-     * =====================================================
-     * FAQ ACCORDION
-     * =====================================================
-     */
-
-    document
-      .querySelectorAll(".faq-question")
-      .forEach(button => {
-
-        button.addEventListener("click", () => {
-
-          const item =
-            button.closest(".faq-item");
-
-          const answer =
-            item.querySelector(".faq-answer");
-
-          const isActive =
-            item.classList.contains("active");
-
-
-          // Close all other FAQ items
-
-          document
-            .querySelectorAll(".faq-item")
-            .forEach(otherItem => {
-
-              if (otherItem !== item) {
-
-                otherItem.classList.remove("active");
-
-                const otherAnswer =
-                  otherItem.querySelector(".faq-answer");
-
-                const otherButton =
-                  otherItem.querySelector(".faq-question");
-
-                otherAnswer.style.maxHeight = null;
-
-                otherButton.setAttribute(
-                  "aria-expanded",
-                  "false"
-                );
-
-              }
-
-            });
-
-
-          if (!isActive) {
-
-            item.classList.add("active");
-
-            answer.style.maxHeight =
-              answer.scrollHeight + "px";
-
-            button.setAttribute(
-              "aria-expanded",
-              "true"
-            );
-
-          } else {
-
-            item.classList.remove("active");
-
-            answer.style.maxHeight = null;
-
-            button.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-
-          }
-
-        });
-
-      });
-
-
-    /*
-     * =====================================================
-     * SCROLL REVEAL
-     * =====================================================
-     */
-
-    const observer =
-      new IntersectionObserver(
-        entries => {
-
-          entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add("visible");
-
-              observer.unobserve(entry.target);
-
-            }
-
-          });
-
-        },
-        {
-          threshold: 0.12
-        }
-      );
-
-
-    document
-      .querySelectorAll(".reveal")
-      .forEach(element => {
-
-        observer.observe(element);
-
-      });
-
-
-    /*
-     * =====================================================
-     * CURRENT YEAR
-     * =====================================================
-     */
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-  </script>
 
 </body>
 </html>
