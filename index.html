@@ -8,11 +8,11 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>Plainsight Deals — Find Your Next Great Project</title>
+  <title>Plainsight Deals — Active Project Leads for Agencies</title>
 
   <meta
     name="description"
-    content="Web Design Leads for Agencies"
+    content="Live leads for agencies, freelancers, consultants and service businesses. Discover website, software, marketing, SEO, design, IT and consulting opportunities."
   />
 
   <meta name="theme-color" content="#11110f" />
@@ -224,10 +224,6 @@
       padding: 100px 0 95px;
       overflow: hidden;
     }
-
-    /*
-      Decorative background marks
-    */
 
     .hero::before {
       content: "";
@@ -616,133 +612,51 @@
       line-height: 1.7;
     }
 
+
+    /* =========================================================
+       SIMPLE IMAGE OPPORTUNITY GRID
+    ========================================================= */
+
     .opportunity-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
 
-    .opportunity-card {
-      background: var(--white);
+.opportunity-card {
+  display: block;
+  width: 100%;
+  background: var(--white);
+  border: 1px solid #d8d4c9;
+  overflow: hidden;
 
-      border: 1px solid #d8d4c9;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
 
-      overflow: hidden;
+.opportunity-card:hover {
+  transform: translateY(-7px) rotate(-0.4deg);
+  box-shadow: 9px 9px 0 var(--yellow);
+}
 
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
+.opportunity-image {
+  width: 100%;
+  aspect-ratio: 1 / 1.414;
+  background: #ddd9cf;
+  overflow: hidden;
+}
 
-    .opportunity-card:hover {
-      transform: translateY(-7px) rotate(-0.4deg);
-      box-shadow: 9px 9px 0 var(--yellow);
-    }
+.opportunity-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
 
-    .opportunity-image {
-      position: relative;
-
-      aspect-ratio: 4 / 3;
-
-      background: #ddd9cf;
-
-      overflow: hidden;
-    }
-
-    /*
-      Replace these with your real opportunity screenshots.
-
-      Example:
-      url("images/opportunity-1.jpg")
-    */
-
-    .opportunity-image.one {
-      background:
-        url("https://placehold.co/900x675/e3dfd4/22221e?text=Opportunity+01")
-        center / cover no-repeat;
-    }
-
-    .opportunity-image.two {
-      background:
-        url("https://placehold.co/900x675/e3dfd4/22221e?text=Opportunity+02")
-        center / cover no-repeat;
-    }
-
-    .opportunity-image.three {
-      background:
-        url("https://placehold.co/900x675/e3dfd4/22221e?text=Opportunity+03")
-        center / cover no-repeat;
-    }
-
-    .opportunity-number {
-      position: absolute;
-
-      top: 12px;
-      left: 12px;
-
-      padding: 6px 9px;
-
-      background: var(--yellow);
-
-      border: 1px solid var(--ink);
-
-      font-size: 10px;
-      font-weight: 900;
-    }
-
-    .opportunity-content {
-      padding: 27px;
-    }
-
-    .opportunity-label {
-      display: inline-block;
-
-      margin-bottom: 15px;
-
-      color: var(--muted);
-
-      font-size: 10px;
-      font-weight: 900;
-
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
-
-    .opportunity-content h3 {
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 26px;
-      line-height: 1.15;
-
-      letter-spacing: -0.03em;
-      font-weight: 500;
-
-      margin-bottom: 14px;
-    }
-
-    .opportunity-content p {
-      color: var(--muted);
-
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .opportunity-fit {
-      margin-top: 24px;
-      padding-top: 18px;
-
-      border-top: 1px solid var(--line);
-
-      color: #4d4b45;
-
-      font-size: 11px;
-      line-height: 1.6;
-    }
-
-    .opportunity-fit strong {
-      color: var(--ink);
-    }
-
+.opportunity-card:hover .opportunity-image img {
+  transform: scale(1.03);
+}
 
     /* =========================================================
        DIFFERENCE / LEAD LIST
@@ -1313,10 +1227,6 @@
         font-size: 49px;
       }
 
-      .opportunity-content {
-        padding: 23px;
-      }
-
       .lead-list-copy p:first-child {
         font-size: 29px;
       }
@@ -1437,13 +1347,12 @@
           <div>
 
             <div class="eyebrow">
-              For agencies & service businesses
+              Active project leads for agencies
             </div>
 
             <h1>
-              Find the projects you
-              <span class="highlight">didn't know</span>
-              were out there.
+              Stop Chasing.
+              <span class="highlight">Start Pitching!</span>
             </h1>
 
           </div>
@@ -1452,20 +1361,19 @@
           <div class="hero-copy">
 
             <p>
-              If you run an agency or a service business,
-              you probably know the feeling.
-              You need more work. So you start looking.
+              Plainsight Deals helps agencies and service businesses
+              find organizations that are actively looking for help.
             </p>
 
             <p>
-              You search Google. Check LinkedIn. Browse job boards.
-              Look through opportunity websites. Search for companies
-              that might need what you do.
+              We find project opportunities across the web and bring
+              them together in one place — so you can spend less time
+              searching and more time deciding what to pitch.
             </p>
 
             <p>
-              And after an hour or two, you've found a lot of things.
-              Just not many things worth pursuing.
+              Website. Software. Marketing. SEO. Design. IT.
+              Consulting and more.
             </p>
 
             <a
@@ -1479,7 +1387,7 @@
             </a>
 
             <div class="hero-note">
-              Real projects. Real organizations. Real deadlines.
+              Find opportunities. Pick your fit. Make your pitch.
             </div>
 
           </div>
@@ -1490,11 +1398,11 @@
         <div class="hero-bottom">
 
           <div class="hero-bottom-left">
-            WEBSITE · SOFTWARE · MARKETING · SEO · DESIGN · CONSULTING
+            WEBSITE · SOFTWARE · MARKETING · SEO · DESIGN · IT · CONSULTING
           </div>
 
           <div class="hero-bottom-right">
-            The work exists. Finding it is the hard part.
+            Less searching. More pitching.
           </div>
 
         </div>
@@ -1519,9 +1427,9 @@
           </div>
 
           <h2>
-            There is a lot of work out there.
+            Your next client
             <br><br>
-            It's just scattered everywhere.
+            may already be looking.
           </h2>
 
         </div>
@@ -1530,14 +1438,14 @@
         <div class="intro-copy">
 
           <p>
-            The frustrating part is that there are organizations
-            out there spending real money on websites, software,
-            marketing, SEO, design and consulting.
+            Organizations constantly need help with websites,
+            software, marketing, SEO, design, IT and consulting.
           </p>
 
           <p>
-            They're looking for someone.
-            You just weren't there when they started looking.
+            The problem is finding those opportunities before
+            they disappear — especially when they're published
+            somewhere you would never think to look.
           </p>
 
 
@@ -1546,35 +1454,39 @@
             <div class="example">
               <div class="example-number">01</div>
               <p>
-                A nonprofit posts a website project on its own website.
+                A nonprofit publishes a website redesign opportunity
+                on its own website.
               </p>
             </div>
 
             <div class="example">
               <div class="example-number">02</div>
               <p>
-                A university starts looking for a software partner.
+                A university looks for a software development partner.
               </p>
             </div>
 
             <div class="example">
               <div class="example-number">03</div>
               <p>
-                A company needs help with SEO but never posts about it on LinkedIn.
+                A company needs SEO or digital marketing support
+                but never advertises it on LinkedIn.
               </p>
             </div>
 
             <div class="example">
               <div class="example-number">04</div>
               <p>
-                An association needs someone to build a new digital platform.
+                An association needs help building a new
+                digital platform.
               </p>
             </div>
 
             <div class="example">
               <div class="example-number">05</div>
               <p>
-                A healthcare organization wants to redesign its website.
+                A healthcare organization is looking for a partner
+                to redesign its website.
               </p>
             </div>
 
@@ -1598,11 +1510,11 @@
         <div>
 
           <div class="eyebrow">
-            Why Plainsight exists
+            What Plainsight does
           </div>
 
           <h2>
-            So we started looking.
+            We find the work.
           </h2>
 
         </div>
@@ -1611,40 +1523,38 @@
         <div class="story-copy">
 
           <p>
-            Plainsight Deals came from a pretty simple idea.
+            Project opportunities are scattered across company
+            websites, nonprofit pages, university portals,
+            industry websites and other corners of the internet.
           </p>
 
           <div class="story-question">
 
             <p>
-              What if someone just spent the time finding these projects?
+              What if you could look in one place instead?
             </p>
 
           </div>
 
           <p>
-            Not another directory with thousands of listings.
-            Not a giant database where you have to dig through
-            hundreds of irrelevant opportunities.
+            That's what Plainsight Deals is built for.
           </p>
 
           <p>
-            And not another platform telling you that you need
-            to “10x your pipeline.”
+            We search for organizations that are looking for
+            outside help, identify opportunities that may be
+            relevant to agencies and service businesses, and
+            bring them together for you to review.
           </p>
 
           <p>
-            Just someone looking around the internet for organizations
-            that are actually looking for help.
+            You don't have to change the way you sell.
+            You don't have to compete inside another marketplace.
           </p>
 
           <p>
-            Then putting the interesting ones in one place.
-          </p>
-
-          <p>
-            So when you have time to look for your next project,
-            you don't have to start from zero.
+            Find an opportunity that fits, contact the organization,
+            make your pitch and see where it goes.
           </p>
 
         </div>
@@ -1665,11 +1575,11 @@
         <div>
 
           <div class="eyebrow">
-            What we look for
+            What you'll find
           </div>
 
           <h2>
-            We're not only looking at government contracts.
+            More than just one type of project.
           </h2>
 
         </div>
@@ -1678,31 +1588,20 @@
         <div class="different-copy">
 
           <p>
-            Government work can be great.
-            But not every agency wants to spend their afternoon
-            reading a 60-page procurement document, figuring out
-            compliance requirements and trying to understand
-            a complicated bidding process.
+            Plainsight isn't limited to one industry or one
+            kind of service.
           </p>
 
           <p>
-            There are plenty of organizations outside of government
-            that need good people too.
+            We look for opportunities from private companies,
+            nonprofits, universities, foundations, healthcare
+            organizations, associations and other organizations
+            that need outside expertise.
           </p>
 
           <p>
-            Nonprofits. Private companies. Universities.
-            Foundations. Healthcare organizations. Associations.
-            Education organizations.
-          </p>
-
-          <p>
-            They need websites, software, marketing, SEO, branding,
-            digital transformation and consulting.
-          </p>
-
-          <p>
-            Those are the opportunities we're interested in.
+            That means you can find projects that match the
+            services your business already provides.
           </p>
 
 
@@ -1715,8 +1614,8 @@
             <span class="service-tag">Digital marketing</span>
             <span class="service-tag">Branding</span>
             <span class="service-tag">Design</span>
+            <span class="service-tag">IT services</span>
             <span class="service-tag">Consulting</span>
-            <span class="service-tag">Digital transformation</span>
             <span class="service-tag">And more</span>
 
           </div>
@@ -1741,138 +1640,122 @@
           <div>
 
             <div class="eyebrow">
-              A few examples
+              Real Leads
             </div>
 
             <h2>
-              The kind of thing you might find.
+              Recent opportunities we've shared with our users
             </h2>
 
           </div>
 
           <p>
-            These aren't hypothetical business problems.
-            They're the kinds of projects organizations put out
-            when they're actually looking for someone.
+            These are the kinds of opportunities Plainsight
+            is designed to surface — projects where an
+            organization is looking for outside help.
           </p>
 
         </div>
 
 
+        <!-- =================================================
+             SIMPLE CLICKABLE OPPORTUNITY IMAGES
+
+             Replace:
+             YOUR-OPPORTUNITY-URL-X
+             YOUR-IMAGE-URL-X
+
+             Each image is the entire clickable card.
+        ================================================== -->
+
         <div class="opportunity-grid">
 
 
-          <!-- CARD 1 -->
+          <!-- OPPORTUNITY 1 -->
 
-          <article class="opportunity-card">
+          <a
+            href="https://drive.google.com/file/d/1qclFmlziF2LVtFxXzF5PPUHyc_jU6FSQ/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="opportunity-card"
+          >
 
-            <div class="opportunity-image one">
+            <div class="opportunity-image">
 
-              <div class="opportunity-number">
-                01
-              </div>
-
-            </div>
-
-            <div class="opportunity-content">
-
-              <div class="opportunity-label">
-                Website
-              </div>
-
-              <h3>
-                A nonprofit needs a new website.
-              </h3>
-
-              <p>
-                A real organization looking for someone to help
-                rethink, redesign and rebuild its online presence.
-              </p>
-
-              <div class="opportunity-fit">
-                <strong>Good fit:</strong>
-                Web design · UX · Development
-              </div>
+              <img
+                src="assets/basalt-chamber-commerce.jpg"
+                alt="Active project opportunity"
+                loading="lazy"
+              />
 
             </div>
 
-          </article>
+          </a>
 
 
-          <!-- CARD 2 -->
+          <!-- OPPORTUNITY 2 -->
 
-          <article class="opportunity-card">
+          <a
+            href="https://drive.google.com/file/d/10qRrG_Wd-Ll-4iceF7E5YKe74uyBB1YJ/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="opportunity-card"
+          >
 
-            <div class="opportunity-image two">
+            <div class="opportunity-image">
 
-              <div class="opportunity-number">
-                02
-              </div>
-
-            </div>
-
-            <div class="opportunity-content">
-
-              <div class="opportunity-label">
-                Software
-              </div>
-
-              <h3>
-                A company has outgrown its software.
-              </h3>
-
-              <p>
-                An organization needs help building, improving
-                or replacing a digital product or internal system.
-              </p>
-
-              <div class="opportunity-fit">
-                <strong>Good fit:</strong>
-                Software development · Product design · Engineering
-              </div>
+              <img
+                src="assets/kzfr-website.jpg"
+                alt="Active project opportunity"
+                loading="lazy"
+              />
 
             </div>
 
-          </article>
+          </a>
 
 
-          <!-- CARD 3 -->
+          <!-- OPPORTUNITY 3 -->
 
-          <article class="opportunity-card">
+          <a
+            href="https://drive.google.com/file/d/1yPWPOs3MdQrXQIbkD8X9h9vhWTRtFNVs/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="opportunity-card"
+          >
 
-            <div class="opportunity-image three">
+            <div class="opportunity-image">
 
-              <div class="opportunity-number">
-                03
-              </div>
-
-            </div>
-
-            <div class="opportunity-content">
-
-              <div class="opportunity-label">
-                Marketing
-              </div>
-
-              <h3>
-                An organization wants to become easier to find online.
-              </h3>
-
-              <p>
-                A project around search visibility, content,
-                digital marketing or the newer world of AEO.
-              </p>
-
-              <div class="opportunity-fit">
-                <strong>Good fit:</strong>
-                SEO · AEO · Content · Digital marketing
-              </div>
+              <img
+                src="assets/kitsap.jpg"
+                alt="Active project opportunity"
+                loading="lazy"
+              />
 
             </div>
 
-          </article>
+          </a>
 
+          <!-- OPPORTUNITY 4 -->
 
+          <a
+            href="https://drive.google.com/file/d/1n6igxxXqNi0E6s_jwtWS7J-rXR_Wo7Jn/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="opportunity-card"
+          >
+
+            <div class="opportunity-image">
+
+              <img
+                src="assets/early-years.jpg"
+                alt="Active project opportunity"
+                loading="lazy"
+              />
+
+            </div>
+
+          </a>
         </div>
 
       </div>
@@ -1891,11 +1774,11 @@
         <div>
 
           <div class="eyebrow yellow">
-            The difference
+            Why it's different
           </div>
 
           <h2>
-            You don't need another lead list.
+            Not a database of random companies.
           </h2>
 
         </div>
@@ -1904,26 +1787,28 @@
         <div class="lead-list-copy">
 
           <p>
-            You need something worth pitching.
+            Find opportunities, not just contacts.
           </p>
 
           <p>
-            There are plenty of places where you can find “leads.”
-            Thousands of companies. Millions of contacts.
-            Endless lists.
+            Traditional lead lists tell you who exists.
+            They give you companies, names, emails and
+            contact information.
           </p>
 
           <p>
-            But knowing that a company exists isn't particularly useful.
+            That's useful when you already know who you want
+            to sell to.
           </p>
 
           <p>
-            Knowing that a company is actively looking for someone
-            to solve a problem you know how to solve is different.
+            But what if you want to know who is actually
+            looking for the services you provide?
           </p>
 
           <div class="lead-list-quote">
-            That's the kind of opportunity we're looking for.
+            We focus on the project first — so you can decide
+            whether the organization is worth pursuing.
           </div>
 
         </div>
@@ -1944,37 +1829,37 @@
         <div class="objection-inner">
 
           <div class="eyebrow">
-            A small disclaimer
+            What Plainsight doesn't promise
           </div>
 
           <h2>
-            And no, we can't promise you'll <span>win.</span>
+            We can't promise you'll <span>win.</span>
           </h2>
 
           <p>
-            We don't think you need another website promising that.
+            And we don't think anyone honestly can.
           </p>
 
           <p>
             Other agencies may see the same opportunity.
-            Some opportunities will be a bad fit.
+            Some projects won't be the right fit.
             Some organizations won't respond.
             Some proposals will lose.
           </p>
 
           <p>
-            That's sales.
+            That's part of selling services.
           </p>
 
           <p>
-            The point isn't to remove all of that.
-            The point is to make sure you actually have
-            something worth pitching in the first place.
+            Plainsight's job isn't to close the deal for you.
+            It's to help you find opportunities worth evaluating
+            so you can spend your time pursuing the ones that fit.
           </p>
 
           <div class="objection-final">
-            Because spending two hours searching for an opportunity
-            isn't the same as spending two hours working on one.
+            You still have to make the pitch.
+            We help you find something worth pitching.
           </div>
 
         </div>
@@ -1995,11 +1880,11 @@
         <div class="outcome-header">
 
           <div class="eyebrow">
-            The outcome
+            The benefit
           </div>
 
           <h2>
-            Think about what you could do with those hours.
+            Spend less time searching. More time selling.
           </h2>
 
         </div>
@@ -2022,7 +1907,7 @@
             <span>You could</span>
 
             <p>
-              Look at an actual project and decide if it's worth pursuing.
+              Review projects that are already worth a look.
             </p>
 
           </div>
@@ -2032,7 +1917,7 @@
             <span>Instead of</span>
 
             <p>
-              Opening dozens of tabs and irrelevant listings.
+              Opening dozens of irrelevant listings.
             </p>
 
           </div>
@@ -2042,7 +1927,7 @@
             <span>You could</span>
 
             <p>
-              Talk to your team about something that actually fits.
+              Quickly decide which opportunities fit your business.
             </p>
 
           </div>
@@ -2062,7 +1947,7 @@
             <span>You could</span>
 
             <p>
-              Spend that time writing a proposal or making the call.
+              Spend that time researching, pitching and following up.
             </p>
 
           </div>
@@ -2071,11 +1956,15 @@
 
 
         <div class="outcome-statement">
-          That's the outcome we're after.
-          Not more notifications. Not another dashboard.
-          Not another subscription you forget about.
+
+          The goal is simple:
+
           <br><br>
-          More time spent pursuing work that could actually become revenue.
+
+          Put more relevant projects in front of you,
+          so you can spend more of your time pursuing work
+          that could become revenue.
+
         </div>
 
       </div>
@@ -2094,11 +1983,11 @@
         <div>
 
           <div class="eyebrow">
-            How it fits
+            How it works
           </div>
 
           <h2>
-            You don't need to change the way you sell.
+            Find it. Fit it. Pitch it.
           </h2>
 
         </div>
@@ -2107,6 +1996,7 @@
         <div>
 
           <div class="steps">
+
 
             <div class="step">
 
@@ -2117,12 +2007,13 @@
               <div>
 
                 <h3>
-                  Open Plainsight.
+                  Browse active opportunities.
                 </h3>
 
                 <p>
-                  When you're ready to look for your next project,
-                  come see what's out there.
+                  See projects from organizations looking for
+                  services such as web development, software,
+                  marketing, SEO, design, IT and consulting.
                 </p>
 
               </div>
@@ -2139,12 +2030,13 @@
               <div>
 
                 <h3>
-                  Find something that makes you stop.
+                  Find the ones that fit.
                 </h3>
 
                 <p>
-                  Read through the opportunity, understand the need
-                  and decide whether it makes sense for your business.
+                  Review the organization, project requirements,
+                  timing and other available details to decide
+                  whether the opportunity makes sense for you.
                 </p>
 
               </div>
@@ -2161,17 +2053,19 @@
               <div>
 
                 <h3>
-                  Go after it.
+                  Make your pitch.
                 </h3>
 
                 <p>
-                  Talk to the organization, write your proposal,
-                  make your pitch and see where it goes.
+                  Contact the organization, submit your proposal
+                  or follow the opportunity's process and see
+                  where it takes you.
                 </p>
 
               </div>
 
             </div>
+
 
           </div>
 
@@ -2193,28 +2087,24 @@
         <div class="final-inner">
 
           <div class="eyebrow yellow">
-            Have a look
+            Find your next opportunity
           </div>
 
           <h2>
-            The internet is full of opportunities.
-            <em>Most just aren't where you expect them to be.</em>
+            Your next project
+            <em>could already be out there.</em>
           </h2>
 
           <p>
-            We're trying to make them easier to find.
+            Plainsight Deals brings together project opportunities
+            from across the web for agencies, freelancers, consultants
+            and service businesses.
           </p>
 
           <p>
-            If you're an agency, freelancer, consultant or service
-            business looking for your next project, take a look at
-            what's currently out there.
-          </p>
-
-          <p>
-            You might find nothing.
-            You might find something interesting.
-            And you might find the project that pays for the whole thing.
+            If you're looking for your next website, software,
+            marketing, SEO, design, IT or consulting project,
+            take a look at what's currently available.
           </p>
 
           <a
@@ -2228,7 +2118,7 @@
           </a>
 
           <div class="final-note">
-            No complicated demo. Just have a look.
+            Browse the opportunities. Find your fit. Make your pitch.
           </div>
 
         </div>
@@ -2256,8 +2146,7 @@
         </div>
 
         <div class="footer-description">
-          Helping agencies and service businesses
-          find work worth pursuing.
+          Active project leads for agencies and service businesses.
         </div>
 
       </div>
@@ -2266,7 +2155,7 @@
       <div class="footer-right">
 
         <div>
-          Website · Software · Marketing · SEO · AEO · Design · Consulting
+          Website · Software · Marketing · SEO · AEO · Design · IT · Consulting
         </div>
 
         <div>
